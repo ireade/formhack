@@ -1,0 +1,296 @@
+/* 
+ * FormHack v1.0.0 (formhack.io)
+ * Copyright © 2015 Ire Aderinokun with MIT Licence
+*/
+
+// Config -----------------------------
+
+// Font
+$fh-font-family: 'Raleway', sans-serif;
+$fh-font-size: 16px;
+$fh-font-color: rgb(40, 40, 40);
+
+// Borders
+$fh-border-radius: 5px;
+$fh-border-width: 1px;
+$fh-border-style: solid;
+$fh-border-color: rgb(200, 200, 200);
+
+// Inputs, Textareas, Select, Option
+$fh-input-height: 40px;
+$fh-input-width: 100%;
+$fh-input-max-width: 400px;
+$fh-input-bg-color: #fff;
+$fh-focus-bg-color: rgb(220, 220, 220);
+$fh-focus-border-color: $fh-border-color;
+$fh-focus-font-color: $fh-font-color;
+
+// Select Vendor Styling
+$fh-allow-vendor-styling: true;
+
+// Fieldset & Legend Styling
+$fh-fieldset-bare: false;
+
+// Buttons & Input Submits
+$fh-button-height: 40px;
+$fh-button-width: 100%;
+$fh-button-max-width: 200px;
+$fh-button-font-color: $fh-font-color;
+$fh-button-bg-color: $fh-focus-bg-color;
+$fh-button-hover-bg-color: $fh-border-color;
+$fh-buton-hover-font-color: $fh-font-color;
+
+// Layout
+$fh-centered: false;
+$fh-display: block;
+
+
+// Mixins for Re-usable Styles
+@mixin center-layout {
+	@if $fh-centered == true { 
+		margin: 10px auto; 
+		text-align: center;
+	}
+	@else { 
+		margin: 10px 0;
+	}
+}
+
+
+/* Global Reset Styles ------------------ */ 
+
+input,
+textarea,
+select,
+option,
+optgroup,
+button,
+legend,
+fieldset {
+	box-sizing: border-box;
+	font-family: $fh-font-family;
+	font-size: $fh-font-size;
+	color: $fh-font-color;
+	vertical-align: top;
+	outline: none;
+
+	display: $fh-display;
+	@include center-layout;
+}
+
+datalist {
+	font-family: $fh-font-family;
+	font-size: $fh-font-size;
+}
+
+label {
+	display: $fh-display;
+	@include center-layout;
+}
+
+
+
+/* Input & Textarea ------------------ */
+
+/* Fields with stnadard width */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"], 
+input[type="color"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="number"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+input[type="week"], 
+input[list],
+input[type="file"],
+select,
+textarea { 
+	width: $fh-input-width;
+	max-width: $fh-input-max-width;
+	padding: $fh-input-height / 5;
+	background-color: $fh-input-bg-color;
+
+	-webkit-border-radius: $fh-border-radius;
+	-moz-border-radius: $fh-border-radius;
+	-ms-border-radius: $fh-border-radius;
+	-o-border-radius: $fh-border-radius;
+	border-radius: $fh-border-radius;
+	border: $fh-border-width $fh-border-style $fh-border-color;
+}
+
+/* Fields with stnadard height */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"], 
+input[type="color"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="number"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+input[list] { 
+	height: $fh-input-height;
+	-webkit-appearance: none;
+}
+
+/* Other */
+
+textarea {
+	-webkit-appearance: none;
+	overflow: auto;
+}
+
+input[type="range"] {
+	height: $fh-input-height;
+	width: $fh-input-width;
+	max-width: $fh-input-max-width;
+}
+
+input[type="file"] {
+	min-height: $fh-input-height;
+}
+
+input[type="search"] {
+	height: $fh-input-height;
+	-webkit-appearance: none;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	display: inline-block;
+	vertical-align: middle;
+}
+// For checkbox and radio to be centered, need to wrap the input and label in a span -
+// .checkbox-container {
+// 	display: block;
+// 	text-align: center;
+// }
+
+
+/* Select ------------------ */
+
+select {
+	height: $fh-input-height;
+
+	@if $fh-allow-vendor-styling == false {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		-ms-appearance: none;
+		-o-appearance: none;
+	}
+}
+
+select[multiple] {
+	height: auto;
+	min-height: $fh-input-height;
+	padding: 0;
+
+	option {
+		margin: 0;
+		padding: $fh-input-height / 5;
+	}
+}
+
+
+/* Fieldset ------------------ */
+
+fieldset {
+	@if $fh-fieldset-bare == true {
+		padding: 0;
+		border: 0;
+	}
+	@else {
+		padding: 10px 25px;
+		-webkit-border-radius: $fh-border-radius;
+		-moz-border-radius: $fh-border-radius;
+		-ms-border-radius: $fh-border-radius;
+		-o-border-radius: $fh-border-radius;
+		border-radius: $fh-border-radius;
+		border: $fh-border-width $fh-border-style $fh-border-color;
+	}
+}
+
+legend {
+	@if $fh-fieldset-bare == true {
+		padding: 0;
+		font-weight: inherit;
+	}
+	@else {
+		padding: 0 5px;
+		font-weight: 700;
+	}
+}
+
+/* Buttons, Input Type Submit/Reset ------------------ */
+
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="image"] {
+	height: $fh-button-height;
+	width: $fh-button-width;
+	max-width: $fh-button-max-width;
+	background-color: $fh-button-bg-color;
+	cursor: pointer;
+	padding: $fh-input-height / 5;
+
+	color: $fh-button-font-color;
+	font-weight: 700;
+
+	-webkit-appearance: none;
+	-moz-appearance: none;
+
+	-webkit-border-radius: $fh-border-radius;
+	-moz-border-radius: $fh-border-radius;
+	-ms-border-radius: $fh-border-radius;
+	-o-border-radius: $fh-border-radius;
+	border-radius: $fh-border-radius;
+	border: $fh-border-width $fh-border-style $fh-border-color;
+}
+
+input[type="image"] {
+	text-align: center;
+	padding: $fh-input-height / 5;
+}
+
+
+/* States ------------------ */ 
+
+input[disabled],
+textarea[disabled],
+select[disabled],
+option[disabled],
+button[disabled] {
+	cursor: not-allowed;
+}
+
+input:focus,
+textarea:focus,
+select:focus,
+option:focus,
+button:focus  {
+	background-color: $fh-focus-bg-color;
+	border-color: $fh-focus-border-color;
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+	background-color: $fh-button-hover-bg-color;
+	color: $fh-buton-hover-font-color;
+}
