@@ -1,7 +1,4 @@
-/* 
- * FormHack v1.0.0 (formhack.io)
- * Copyright © 2015 Ire Aderinokun with MIT Licence
-*/
+/* FormHack v1.0.0 (formhack.io) */
 
 // Config -----------------------------
 
@@ -68,12 +65,13 @@ button,
 legend,
 fieldset {
 	box-sizing: border-box;
+	outline: none;
+
 	font-family: $fh-font-family;
 	font-size: $fh-font-size;
 	color: $fh-font-color;
 	vertical-align: top;
-	outline: none;
-
+	
 	display: $fh-display;
 	@include center-layout;
 }
@@ -204,7 +202,6 @@ select[multiple] {
 	}
 }
 
-
 /* Fieldset ------------------ */
 
 fieldset {
@@ -245,8 +242,8 @@ input[type="image"] {
 	width: $fh-button-width;
 	max-width: $fh-button-max-width;
 	background-color: $fh-button-bg-color;
-	cursor: pointer;
 	padding: $fh-input-height / 5;
+	cursor: pointer;
 
 	color: $fh-button-font-color;
 	font-weight: 700;
@@ -266,7 +263,6 @@ input[type="image"] {
 	text-align: center;
 	padding: $fh-input-height / 5;
 }
-
 
 /* States ------------------ */ 
 
