@@ -42,7 +42,7 @@ $fh-centered: false;
 $fh-display: block;
 
 
-// Mixins for Re-usable Styles
+// Center/Left-Aligned Layout
 @mixin center-layout {
 	@if $fh-centered == true { 
 		margin: 10px auto; 
