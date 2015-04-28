@@ -35,7 +35,7 @@ $fh-button-max-width: 200px;
 $fh-button-font-color: $fh-font-color;
 $fh-button-bg-color: $fh-focus-bg-color;
 $fh-button-hover-bg-color: $fh-border-color;
-$fh-buton-hover-font-color: $fh-font-color;
+$fh-button-hover-font-color: $fh-font-color;
 
 // Layout
 $fh-centered: false;
@@ -288,5 +288,5 @@ input[type="button"]:hover,
 input[type="submit"]:hover,
 input[type="reset"]:hover {
 	background-color: $fh-button-hover-bg-color;
-	color: $fh-buton-hover-font-color;
+	color: $fh-button-hover-font-color;
 }
