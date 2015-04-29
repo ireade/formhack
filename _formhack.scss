@@ -44,17 +44,17 @@ $fh-display: block;
 
 // Center/Left-Aligned Layout
 @mixin center-layout {
-	@if $fh-centered == true { 
-		margin: 10px auto; 
+	@if $fh-centered == true {
+		margin: 10px auto;
 		text-align: center;
 	}
-	@else { 
+	@else {
 		margin: 10px 0;
 	}
 }
 
 
-/* Global Reset Styles ------------------ */ 
+/* Global Reset Styles ------------------ */
 
 input,
 textarea,
@@ -71,7 +71,7 @@ fieldset {
 	font-size: $fh-font-size;
 	color: $fh-font-color;
 	vertical-align: top;
-	
+
 	display: $fh-display;
 	@include center-layout;
 }
@@ -90,11 +90,11 @@ label {
 
 /* Input & Textarea ------------------ */
 
-/* Fields with stnadard width */
+/* Fields with standard width */
 input[type="text"],
 input[type="email"],
 input[type="password"],
-input[type="search"], 
+input[type="search"],
 input[type="color"],
 input[type="date"],
 input[type="datetime-local"],
@@ -103,11 +103,11 @@ input[type="number"],
 input[type="tel"],
 input[type="time"],
 input[type="url"],
-input[type="week"], 
+input[type="week"],
 input[list],
 input[type="file"],
 select,
-textarea { 
+textarea {
 	width: $fh-input-width;
 	max-width: $fh-input-max-width;
 	padding: $fh-input-height / 5;
@@ -121,11 +121,11 @@ textarea {
 	border: $fh-border-width $fh-border-style $fh-border-color;
 }
 
-/* Fields with stnadard height */
+/* Fields with standard height */
 input[type="text"],
 input[type="email"],
 input[type="password"],
-input[type="search"], 
+input[type="search"],
 input[type="color"],
 input[type="date"],
 input[type="datetime-local"],
@@ -135,7 +135,7 @@ input[type="tel"],
 input[type="time"],
 input[type="url"],
 input[type="week"],
-input[list] { 
+input[list] {
 	height: $fh-input-height;
 	-webkit-appearance: none;
 }
@@ -264,7 +264,7 @@ input[type="image"] {
 	padding: $fh-input-height / 5;
 }
 
-/* States ------------------ */ 
+/* States ------------------ */
 
 input[disabled],
 textarea[disabled],
