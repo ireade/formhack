@@ -43,15 +43,15 @@ $fh-display: block
 
 
 // Center/Left-Aligned Layout
-=center-layout 
-	@if $fh-centered == true 
+=center-layout
+	@if $fh-centered == true
 		margin: 10px auto
 		text-align: center
-	@else 
+	@else
 		margin: 10px 0
 
 
-/* Global Reset Styles ------------------ */ 
+/* Global Reset Styles ------------------ */
 
 input,
 textarea,
@@ -60,7 +60,7 @@ option,
 optgroup,
 button,
 legend,
-fieldset 
+fieldset
 	box-sizing: border-box
 	font-family: $fh-font-family
 	font-size: $fh-font-size
@@ -71,22 +71,22 @@ fieldset
 	display: $fh-display
 	+center-layout
 
-datalist 
+datalist
 	font-family: $fh-font-family
 	font-size: $fh-font-size
 
-label 
+label
 	display: $fh-display
 	+center-layout
 
 
 /* Input & Textarea ------------------ */
 
-/* Fields with stnadard width */
+/* Fields with standard width */
 input[type="text"],
 input[type="email"],
 input[type="password"],
-input[type="search"], 
+input[type="search"],
 input[type="color"],
 input[type="date"],
 input[type="datetime-local"],
@@ -95,11 +95,11 @@ input[type="number"],
 input[type="tel"],
 input[type="time"],
 input[type="url"],
-input[type="week"], 
+input[type="week"],
 input[list],
 input[type="file"],
 select,
-textarea 
+textarea
 	width: $fh-input-width
 	max-width: $fh-input-max-width
 	padding: $fh-input-height / 5
@@ -113,11 +113,11 @@ textarea
 	border: $fh-border-width $fh-border-style $fh-border-color
 
 
-/* Fields with stnadard height */
+/* Fields with standard height */
 input[type="text"],
 input[type="email"],
 input[type="password"],
-input[type="search"], 
+input[type="search"],
 input[type="color"],
 input[type="date"],
 input[type="datetime-local"],
@@ -127,80 +127,80 @@ input[type="tel"],
 input[type="time"],
 input[type="url"],
 input[type="week"],
-input[list] 
+input[list]
 	height: $fh-input-height
 	-webkit-appearance: none
 
 
 /* Other */
 
-textarea 
+textarea
 	-webkit-appearance: none
 	overflow: auto
 
 
-input[type="range"] 
+input[type="range"]
 	height: $fh-input-height
 	width: $fh-input-width
 	max-width: $fh-input-max-width
 
 
-input[type="file"] 
+input[type="file"]
 	min-height: $fh-input-height
 
 
-input[type="search"] 
+input[type="search"]
 	height: $fh-input-height
 	-webkit-appearance: none
 
 input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration 
+input[type="search"]::-webkit-search-decoration
 	-webkit-appearance: none
 
 input[type="checkbox"],
-input[type="radio"] 
+input[type="radio"]
 	display: inline-block
 	vertical-align: middle
 
 // For checkbox and radio to be centered, need to wrap the input and label in a span -
-// .checkbox-container 
+// .checkbox-container
 // 	display: block
 // 	text-align: center
-// 
+//
 
 
 /* Select ------------------ */
 
-select 
+select
 	height: $fh-input-height
 
-	@if $fh-allow-vendor-styling == false 
+	@if $fh-allow-vendor-styling == false
 		-webkit-appearance: none
 		-moz-appearance: none
 		-ms-appearance: none
 		-o-appearance: none
 
 
-select[multiple] 
+select[multiple]
 	height: auto
 	min-height: $fh-input-height
 	padding: 0
 
-	option 
+	option
 		margin: 0
 		padding: $fh-input-height / 5
-	
+
 
 
 
 /* Fieldset ------------------ */
 
-fieldset 
-	@if $fh-fieldset-bare == true 
+fieldset
+	@if $fh-fieldset-bare == true
 		padding: 0
 		border: 0
 
-	@else 
+	@else
 		padding: 10px 25px
 		-webkit-border-radius: $fh-border-radius
 		-moz-border-radius: $fh-border-radius
@@ -208,15 +208,15 @@ fieldset
 		-o-border-radius: $fh-border-radius
 		border-radius: $fh-border-radius
 		border: $fh-border-width $fh-border-style $fh-border-color
-	
 
 
-legend 
-	@if $fh-fieldset-bare == true 
+
+legend
+	@if $fh-fieldset-bare == true
 		padding: 0
 		font-weight: inherit
-	
-	@else 
+
+	@else
 		padding: 0 5px
 		font-weight: 700
 
@@ -227,7 +227,7 @@ button,
 input[type="button"],
 input[type="submit"],
 input[type="reset"],
-input[type="image"] 
+input[type="image"]
 	height: $fh-button-height
 	width: $fh-button-width
 	max-width: $fh-button-max-width
@@ -249,19 +249,19 @@ input[type="image"]
 	border: $fh-border-width $fh-border-style $fh-border-color
 
 
-input[type="image"] 
+input[type="image"]
 	text-align: center
 	padding: $fh-input-height / 5
 
 
 
-/* States ------------------ */ 
+/* States ------------------ */
 
 input[disabled],
 textarea[disabled],
 select[disabled],
 option[disabled],
-button[disabled] 
+button[disabled]
 	cursor: not-allowed
 
 
@@ -269,7 +269,7 @@ input:focus,
 textarea:focus,
 select:focus,
 option:focus,
-button:focus  
+button:focus
 	background-color: $fh-focus-bg-color
 	border-color: $fh-focus-border-color
 
@@ -277,6 +277,6 @@ button:focus
 button:hover,
 input[type="button"]:hover,
 input[type="submit"]:hover,
-input[type="reset"]:hover 
+input[type="reset"]:hover
 	background-color: $fh-button-hover-bg-color
 	color: $fh-button-hover-font-color
