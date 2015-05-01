@@ -116,8 +116,6 @@ textarea {
 
 	-webkit-border-radius: $fh-border-radius;
 	-moz-border-radius: $fh-border-radius;
-	-ms-border-radius: $fh-border-radius;
-	-o-border-radius: $fh-border-radius;
 	border-radius: $fh-border-radius;
 	border: $fh-border-width $fh-border-style $fh-border-color;
 }
@@ -214,8 +212,6 @@ fieldset {
 		padding: 10px 25px;
 		-webkit-border-radius: $fh-border-radius;
 		-moz-border-radius: $fh-border-radius;
-		-ms-border-radius: $fh-border-radius;
-		-o-border-radius: $fh-border-radius;
 		border-radius: $fh-border-radius;
 		border: $fh-border-width $fh-border-style $fh-border-color;
 	}
@@ -254,8 +250,6 @@ input[type="image"] {
 
 	-webkit-border-radius: $fh-border-radius;
 	-moz-border-radius: $fh-border-radius;
-	-ms-border-radius: $fh-border-radius;
-	-o-border-radius: $fh-border-radius;
 	border-radius: $fh-border-radius;
 	border: $fh-border-width $fh-border-style $fh-border-color;
 }
