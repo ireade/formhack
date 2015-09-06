@@ -11,13 +11,13 @@ If you have any questions or suggestions for how I can make this better, tweet m
 
 You can use any of the following methods to start using Formhack -
 
-1. Install with [Bower](http://bower.io/)
+Install with [Bower](http://bower.io/)
 
 ```
 bower install formhack
 ```
 
-2. Clone this repository
+Clone this repository
 
 ```
 git clone https://github.com/ireade/formhack.git
@@ -68,3 +68,16 @@ $fh-button-hover-font-color: $fh-font-color;
 $fh-centered: false;
 $fh-display: block;
 ```
+
+### Variables
+
+Here is an explanation of what some of the variables control.
+
+Variable | Description
+---------|-------------
+`$fh-allow-vendor-styling` | Boolean. Specifies whether you want the `select` element to have the different browser styling
+`$fh-fieldset-bare` | Boolean. Specifies whether you want the `fieldset` element to be styled or bare.
+`$fh-centered` | Boolean. Specifies whether the elements should be centered
+`$fh-display` | String. Specifies what value you want the `display` css property to be set to
+
+
