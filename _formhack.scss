@@ -1,22 +1,24 @@
 /* FormHack v1.1.0 (formhack.io) */
 
+@import "functions";
+
 // Config -----------------------------
 
 // Font
 $fh-font-family: 'Raleway', sans-serif !default;
-$fh-font-size: 16px !default;
+$fh-font-size: f-calc(16) !default;
 $fh-font-color: rgb(40, 40, 40) !default;
 
 // Borders
-$fh-border-radius: 5px !default;
-$fh-border-width: 1px !default;
+$fh-border-radius: f-calc(5) !default;
+$fh-border-width: f-calc(1) !default;
 $fh-border-style: solid !default;
 $fh-border-color: rgb(200, 200, 200) !default;
 
 // Inputs, Textareas, Select, Option
-$fh-input-height: 40px !default;
+$fh-input-height: f-calc(40) !default;
 $fh-input-width: 100% !default;
-$fh-input-max-width: 400px !default;
+$fh-input-max-width: f-calc(400) !default;
 $fh-input-bg-color: #fff !default;
 $fh-focus-bg-color: rgb(220, 220, 220) !default;
 $fh-focus-border-color: $fh-border-color !default;
@@ -29,9 +31,9 @@ $fh-allow-vendor-styling: true !default;
 $fh-fieldset-bare: false !default;
 
 // Buttons & Input Submits
-$fh-button-height: 40px !default;
+$fh-button-height: f-calc(40) !default;
 $fh-button-width: 100% !default;
-$fh-button-max-width: 200px !default;
+$fh-button-max-width: f-calc(200) !default;
 $fh-button-font-color: $fh-font-color !default;
 $fh-button-bg-color: $fh-focus-bg-color !default;
 $fh-button-hover-bg-color: $fh-border-color !default;
@@ -45,11 +47,11 @@ $fh-display: block !default;
 // Center/Left-Aligned Layout
 @mixin center-layout {
 	@if $fh-centered == true {
-		margin: 10px auto;
+		margin: f-calc(10) auto;
 		text-align: center;
 	}
 	@else {
-		margin: 10px 0;
+		margin: f-calc(10 0);
 	}
 }
 
@@ -209,7 +211,7 @@ fieldset {
 		border: 0;
 	}
 	@else {
-		padding: 10px 25px;
+		padding: f-calc(10 25);
 		-webkit-border-radius: $fh-border-radius;
 		-moz-border-radius: $fh-border-radius;
 		border-radius: $fh-border-radius;
@@ -223,7 +225,7 @@ legend {
 		font-weight: inherit;
 	}
 	@else {
-		padding: 0 5px;
+		padding: f-calc(0 5);
 		font-weight: 700;
 	}
 }
