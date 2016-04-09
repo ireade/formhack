@@ -1,4 +1,4 @@
-/* FormHack v1.1.0 (formhack.io) */
+/* FormHack v1.2.0 (formhack.io) */
 
 // Config -----------------------------
 
@@ -23,7 +23,7 @@ $fh-focus-border-color: $fh-border-color !default;
 $fh-focus-font-color: $fh-font-color !default;
 
 // Select Vendor Styling
-$fh-allow-vendor-styling: true !default;
+$fh-allow-select-vendor-styling: true !default;
 
 // Fieldset & Legend Styling
 $fh-fieldset-bare: false !default;
@@ -52,7 +52,6 @@ $fh-display: block !default;
 		margin: 10px 0;
 	}
 }
-
 
 /* Global Reset Styles ------------------ */
 
@@ -114,8 +113,6 @@ textarea {
 	padding: $fh-input-height / 5;
 	background-color: $fh-input-bg-color;
 
-	-webkit-border-radius: $fh-border-radius;
-	-moz-border-radius: $fh-border-radius;
 	border-radius: $fh-border-radius;
 	border: $fh-border-width $fh-border-style $fh-border-color;
 }
@@ -182,7 +179,7 @@ input[type="radio"] {
 select {
 	height: $fh-input-height;
 
-	@if $fh-allow-vendor-styling == false {
+	@if $fh-allow-select-vendor-styling == false {
 		-webkit-appearance: none;
 		-moz-appearance: none;
 		-ms-appearance: none;
@@ -210,8 +207,6 @@ fieldset {
 	}
 	@else {
 		padding: 10px 25px;
-		-webkit-border-radius: $fh-border-radius;
-		-moz-border-radius: $fh-border-radius;
 		border-radius: $fh-border-radius;
 		border: $fh-border-width $fh-border-style $fh-border-color;
 	}
@@ -248,8 +243,6 @@ input[type="image"] {
 	-webkit-appearance: none;
 	-moz-appearance: none;
 
-	-webkit-border-radius: $fh-border-radius;
-	-moz-border-radius: $fh-border-radius;
 	border-radius: $fh-border-radius;
 	border: $fh-border-width $fh-border-style $fh-border-color;
 }

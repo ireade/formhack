@@ -2,8 +2,9 @@
   "name": "formhack",
   "description": "FormHack is a hackable SASS-based form reset. In addition to being a css reset for form elements, it provides a few variables that allow you to easily change some common attributes.",
   "main": [
-    "_formhack.sass",
-    "_formhack.scss"
+    "formhack.sass",
+    "formhack.scss",
+    "formhack.css"
   ],
   "keywords": [
     "sass",
@@ -12,11 +13,17 @@
     "form"
   ],
   "authors": [
-    "Ire Aderinokun <ire@ireaderinokun.com> (http://bitsofco.de)"
+    "Ire Aderinokun <ire@ireaderinokun.com> (http://ireaderinokun.com)"
   ],
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git://github.com/ireade/formhack.git"
-  }
+  },
+  "ignore": [
+    "example",
+    "gulpfile.js",
+    "package.json",
+    "node_modules"
+  ]
 }
