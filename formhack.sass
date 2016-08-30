@@ -176,6 +176,8 @@ select
 		-ms-appearance: none
 		-o-appearance: none
 
+		::-ms-expand
+			display: none
 
 select[multiple]
 	height: auto
@@ -261,7 +263,7 @@ button:focus
 	border-color: $fh-focus-border-color
 
 input[type="checkbox"]:focus,
-input[type="radio"]:focus 
+input[type="radio"]:focus
 	outline: $fh-focus-border-color solid 2px
 
 button:hover,
@@ -271,6 +273,6 @@ input[type="reset"]:hover,
 button:focus,
 input[type="button"]:focus,
 input[type="submit"]:focus,
-input[type="reset"]:focus 
+input[type="reset"]:focus
 	background-color: $fh-button-hover-bg-color
 	color: $fh-button-hover-font-color
