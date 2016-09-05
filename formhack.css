@@ -182,6 +182,10 @@ select {
 
 }
 
+select::-ms-expand{
+	display: none;
+}
+
 select[multiple] {
   height: auto;
   min-height: var(--fh-input-height);

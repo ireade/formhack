@@ -184,6 +184,9 @@ select {
 		-moz-appearance: none;
 		-ms-appearance: none;
 		-o-appearance: none;
+		&::-ms-expand {
+			display: none;
+		}
 	}
 }
 
