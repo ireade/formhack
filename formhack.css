@@ -23,6 +23,9 @@
   --fh-focus-border-color: var(--fh-border-color);
   --fh-focus-font-color: var(--fh-font-color);
 
+  /* Inputs Vendor Styling */
+  --fh-input-vendor-styling: none; /* comment this out to maintain vendor styling */
+
   /* Select Vendor Styling */
   --fh-select-vendor-styling: none; /* comment this out to maintain vendor styling */
 
@@ -129,6 +132,24 @@ input[type="week"],
 input[list] {
   height: var(--fh-input-height);
   -webkit-appearance: none;
+}
+
+/* Fields with standard height */
+input[type="text"]::-ms-clear,
+input[type="email"]::-ms-clear,
+input[type="password"]::-ms-reveal,
+input[type="search"]::-ms-clear,
+input[type="color"]::-ms-clear,
+input[type="date"]::-ms-clear,
+input[type="datetime-local"]::-ms-clear,
+input[type="month"]::-ms-clear,
+input[type="number"]::-ms-clear,
+input[type="tel"]::-ms-clear,
+input[type="time"]::-ms-clear,
+input[type="url"]::-ms-clear,
+input[type="week"]::-ms-clear,
+input[list]::-ms-clear {
+  display: var(--fh-input-vendor-styling);
 }
 
 /* Other */

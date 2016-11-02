@@ -22,6 +22,9 @@ $fh-focus-bg-color: rgb(220, 220, 220) !default
 $fh-focus-border-color: $fh-border-color !default
 $fh-focus-font-color: $fh-font-color !default
 
+// Inputs Vendor Styling
+$fh-allow-input-vendor-styling: true !default
+
 // Select Vendor Styling
 $fh-allow-select-vendor-styling: true !default
 
@@ -126,6 +129,9 @@ input[type="week"],
 input[list]
 	height: $fh-input-height
 	-webkit-appearance: none
+	@if $fh-allow-input-vendor-styling == false
+		&::-ms-clear, &::-ms-reveal
+		    display: none
 
 
 /* Other */
